@@ -64,7 +64,6 @@
 #pragma mark App Delegate Methods
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-  self.window.level = NSFloatingWindowLevel;
   self.persistentNetworks = [[NSProcessInfo processInfo] arguments];
   
   self.interface = [[CWWiFiClient sharedWiFiClient] interface];
