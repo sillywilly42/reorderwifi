@@ -7,20 +7,54 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D1649CA2B2F83D3BB7079E5 /* libPods-ReorderWiFiHelperTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 655E2FE7D02681AAEA9F174C /* libPods-ReorderWiFiHelperTool.a */; };
 		490D58541CA0475F00EB86DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 490D58531CA0475F00EB86DD /* AppDelegate.m */; };
 		490D58571CA0475F00EB86DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 490D58561CA0475F00EB86DD /* main.m */; };
 		490D585C1CA0476000EB86DD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 490D585A1CA0476000EB86DD /* MainMenu.xib */; };
 		8D02A6B21D9DA2C1003DF14D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D02A6B11D9DA2C1003DF14D /* Images.xcassets */; };
+		8D8603AF1DD0D686005AF133 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8603AE1DD0D686005AF133 /* main.m */; };
+		8D8603BD1DD0D7DD005AF133 /* ReorderWiFiHelperTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8603BC1DD0D7DD005AF133 /* ReorderWiFiHelperTool.m */; };
+		8D8603BE1DD0E2DC005AF133 /* SNTXPCConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8603B71DD0D764005AF133 /* SNTXPCConnection.m */; };
+		8D8603BF1DD0E2DD005AF133 /* SNTXPCConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8603B71DD0D764005AF133 /* SNTXPCConnection.m */; };
+		F019E3BFD6B3BBC8FC76B9AD /* libPods-ReorderWiFi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B91C5A4596CBC41825247E07 /* libPods-ReorderWiFi.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8D8603AA1DD0D686005AF133 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		09013EF2C77117FCA8C651E0 /* Pods-ReorderWiFi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReorderWiFi.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReorderWiFi/Pods-ReorderWiFi.release.xcconfig"; sourceTree = "<group>"; };
+		22F9D1DE66C5F73F12BA7E42 /* Pods-ReorderWiFiHelperTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReorderWiFiHelperTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReorderWiFiHelperTool/Pods-ReorderWiFiHelperTool.debug.xcconfig"; sourceTree = "<group>"; };
 		490D584F1CA0475F00EB86DD /* ReorderWiFi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReorderWiFi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		490D58521CA0475F00EB86DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		490D58531CA0475F00EB86DD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		490D58561CA0475F00EB86DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		490D585B1CA0476000EB86DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		490D585D1CA0476000EB86DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		655E2FE7D02681AAEA9F174C /* libPods-ReorderWiFiHelperTool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReorderWiFiHelperTool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		83C40B536DE106F3BD213B3E /* Pods-ReorderWiFiHelperTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReorderWiFiHelperTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReorderWiFiHelperTool/Pods-ReorderWiFiHelperTool.release.xcconfig"; sourceTree = "<group>"; };
+		86D27EFF94F07CE088BCA793 /* Pods-ReorderWiFi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReorderWiFi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReorderWiFi/Pods-ReorderWiFi.debug.xcconfig"; sourceTree = "<group>"; };
 		8D02A6B11D9DA2C1003DF14D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8D8603AC1DD0D686005AF133 /* ReorderWiFiHelperTool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ReorderWiFiHelperTool; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D8603AE1DD0D686005AF133 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8D8603B51DD0D764005AF133 /* SNTStrengthify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNTStrengthify.h; sourceTree = "<group>"; };
+		8D8603B61DD0D764005AF133 /* SNTXPCConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNTXPCConnection.h; sourceTree = "<group>"; };
+		8D8603B71DD0D764005AF133 /* SNTXPCConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNTXPCConnection.m; sourceTree = "<group>"; };
+		8D8603B81DD0D764005AF133 /* XPCProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPCProtocol.h; sourceTree = "<group>"; };
+		8D8603BB1DD0D7DD005AF133 /* ReorderWiFiHelperTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReorderWiFiHelperTool.h; sourceTree = "<group>"; };
+		8D8603BC1DD0D7DD005AF133 /* ReorderWiFiHelperTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReorderWiFiHelperTool.m; sourceTree = "<group>"; };
+		8D8603C01DD0E330005AF133 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		8DD584621DD0EE5200A90C66 /* org.willjenkins.ReorderWiFiHelperTool.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = org.willjenkins.ReorderWiFiHelperTool.plist; sourceTree = "<group>"; };
+		B91C5A4596CBC41825247E07 /* libPods-ReorderWiFi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReorderWiFi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +62,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F019E3BFD6B3BBC8FC76B9AD /* libPods-ReorderWiFi.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D8603A91DD0D686005AF133 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D1649CA2B2F83D3BB7079E5 /* libPods-ReorderWiFiHelperTool.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,8 +80,12 @@
 		490D58461CA0475F00EB86DD = {
 			isa = PBXGroup;
 			children = (
+				8D8603B31DD0D764005AF133 /* Shared */,
 				490D58511CA0475F00EB86DD /* ReorderWiFi */,
+				8D8603AD1DD0D686005AF133 /* ReorderWiFiHelperTool */,
 				490D58501CA0475F00EB86DD /* Products */,
+				69F0F576216150A2AC212294 /* Pods */,
+				945E2E7E886548BF8177F125 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -46,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				490D584F1CA0475F00EB86DD /* ReorderWiFi.app */,
+				8D8603AC1DD0D686005AF133 /* ReorderWiFiHelperTool */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,6 +119,57 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		69F0F576216150A2AC212294 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				86D27EFF94F07CE088BCA793 /* Pods-ReorderWiFi.debug.xcconfig */,
+				09013EF2C77117FCA8C651E0 /* Pods-ReorderWiFi.release.xcconfig */,
+				22F9D1DE66C5F73F12BA7E42 /* Pods-ReorderWiFiHelperTool.debug.xcconfig */,
+				83C40B536DE106F3BD213B3E /* Pods-ReorderWiFiHelperTool.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8D8603AD1DD0D686005AF133 /* ReorderWiFiHelperTool */ = {
+			isa = PBXGroup;
+			children = (
+				8D8603AE1DD0D686005AF133 /* main.m */,
+				8DD584621DD0EE5200A90C66 /* org.willjenkins.ReorderWiFiHelperTool.plist */,
+				8D8603BB1DD0D7DD005AF133 /* ReorderWiFiHelperTool.h */,
+				8D8603BC1DD0D7DD005AF133 /* ReorderWiFiHelperTool.m */,
+			);
+			path = ReorderWiFiHelperTool;
+			sourceTree = "<group>";
+		};
+		8D8603B31DD0D764005AF133 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				8D8603B41DD0D764005AF133 /* External */,
+				8D8603B81DD0D764005AF133 /* XPCProtocol.h */,
+				8D8603C01DD0E330005AF133 /* PrefixHeader.pch */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		8D8603B41DD0D764005AF133 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				8D8603B51DD0D764005AF133 /* SNTStrengthify.h */,
+				8D8603B61DD0D764005AF133 /* SNTXPCConnection.h */,
+				8D8603B71DD0D764005AF133 /* SNTXPCConnection.m */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		945E2E7E886548BF8177F125 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B91C5A4596CBC41825247E07 /* libPods-ReorderWiFi.a */,
+				655E2FE7D02681AAEA9F174C /* libPods-ReorderWiFiHelperTool.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +177,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 490D58601CA0476000EB86DD /* Build configuration list for PBXNativeTarget "ReorderWiFi" */;
 			buildPhases = (
+				34BEC6E02999A1FA2EC10C96 /* [CP] Check Pods Manifest.lock */,
 				490D584B1CA0475F00EB86DD /* Sources */,
 				490D584C1CA0475F00EB86DD /* Frameworks */,
 				490D584D1CA0475F00EB86DD /* Resources */,
+				AE9351B8B60A6D9427485799 /* [CP] Embed Pods Frameworks */,
+				33F9BF6980513F5F6444B0EA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -91,17 +193,40 @@
 			productReference = 490D584F1CA0475F00EB86DD /* ReorderWiFi.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8D8603AB1DD0D686005AF133 /* ReorderWiFiHelperTool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D8603B21DD0D686005AF133 /* Build configuration list for PBXNativeTarget "ReorderWiFiHelperTool" */;
+			buildPhases = (
+				9392A5EECBDA775746E6FB54 /* [CP] Check Pods Manifest.lock */,
+				8D8603A81DD0D686005AF133 /* Sources */,
+				8D8603A91DD0D686005AF133 /* Frameworks */,
+				8D8603AA1DD0D686005AF133 /* CopyFiles */,
+				0238EE989EBC0C07455DC1AC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReorderWiFiHelperTool;
+			productName = ReorderWiFiHelperTool;
+			productReference = 8D8603AC1DD0D686005AF133 /* ReorderWiFiHelperTool */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		490D58471CA0475F00EB86DD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Will Jenkins";
 				TargetAttributes = {
 					490D584E1CA0475F00EB86DD = {
 						CreatedOnToolsVersion = 7.2;
+					};
+					8D8603AB1DD0D686005AF133 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -119,6 +244,7 @@
 			projectRoot = "";
 			targets = (
 				490D584E1CA0475F00EB86DD /* ReorderWiFi */,
+				8D8603AB1DD0D686005AF133 /* ReorderWiFiHelperTool */,
 			);
 		};
 /* End PBXProject section */
@@ -135,6 +261,84 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0238EE989EBC0C07455DC1AC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReorderWiFiHelperTool/Pods-ReorderWiFiHelperTool-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		33F9BF6980513F5F6444B0EA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReorderWiFi/Pods-ReorderWiFi-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		34BEC6E02999A1FA2EC10C96 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9392A5EECBDA775746E6FB54 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AE9351B8B60A6D9427485799 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReorderWiFi/Pods-ReorderWiFi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		490D584B1CA0475F00EB86DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -142,6 +346,17 @@
 			files = (
 				490D58571CA0475F00EB86DD /* main.m in Sources */,
 				490D58541CA0475F00EB86DD /* AppDelegate.m in Sources */,
+				8D8603BF1DD0E2DD005AF133 /* SNTXPCConnection.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D8603A81DD0D686005AF133 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D8603BD1DD0D7DD005AF133 /* ReorderWiFiHelperTool.m in Sources */,
+				8D8603AF1DD0D686005AF133 /* main.m in Sources */,
+				8D8603BE1DD0E2DC005AF133 /* SNTXPCConnection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,11 +387,13 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Developer ID Application: Will Jenkins (HTKYE4A7HX)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -185,6 +402,8 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Shared/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -215,17 +434,21 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Developer ID Application: Will Jenkins (HTKYE4A7HX)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Shared/PrefixHeader.pch;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -240,9 +463,13 @@
 		};
 		490D58611CA0476000EB86DD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86D27EFF94F07CE088BCA793 /* Pods-ReorderWiFi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application: Will Jenkins (HTKYE4A7HX)";
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Shared/PrefixHeader.pch;
 				INFOPLIST_FILE = ReorderWiFi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.willjenkins.ReorderWiFi;
@@ -252,12 +479,48 @@
 		};
 		490D58621CA0476000EB86DD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09013EF2C77117FCA8C651E0 /* Pods-ReorderWiFi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application: Will Jenkins (HTKYE4A7HX)";
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Shared/PrefixHeader.pch;
 				INFOPLIST_FILE = ReorderWiFi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.willjenkins.ReorderWiFi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8D8603B01DD0D686005AF133 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22F9D1DE66C5F73F12BA7E42 /* Pods-ReorderWiFiHelperTool.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application: Will Jenkins (HTKYE4A7HX)";
+				DEVELOPMENT_TEAM = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Shared/PrefixHeader.pch;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8D8603B11DD0D686005AF133 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83C40B536DE106F3BD213B3E /* Pods-ReorderWiFiHelperTool.release.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application: Will Jenkins (HTKYE4A7HX)";
+				DEVELOPMENT_TEAM = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Shared/PrefixHeader.pch;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -279,6 +542,15 @@
 			buildConfigurations = (
 				490D58611CA0476000EB86DD /* Debug */,
 				490D58621CA0476000EB86DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D8603B21DD0D686005AF133 /* Build configuration list for PBXNativeTarget "ReorderWiFiHelperTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D8603B01DD0D686005AF133 /* Debug */,
+				8D8603B11DD0D686005AF133 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

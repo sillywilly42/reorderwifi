@@ -1,0 +1,5 @@
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+  #import <Cocoa/Cocoa.h>
+  #import <Foundation/Foundation.h>
+#endif /* PrefixHeader_pch */

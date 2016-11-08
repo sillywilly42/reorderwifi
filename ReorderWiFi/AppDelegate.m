@@ -1,7 +1,7 @@
 @import CoreWLAN;
-@import Security;
-@import SecurityFoundation;
 
+#import "SNTXPCConnection.h"
+#import "XPCProtocol.h"
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
@@ -9,26 +9,10 @@
 @property (weak) IBOutlet NSTableView *tableView;
 @property NSArray *persistentNetworks;
 @property NSMutableArray *networks;
-@property CWInterface *interface;
-@property CWMutableConfiguration *config;
+@property SNTXPCConnection *xpcc;
 @end
 
 @implementation AppDelegate
-
-
-- (BOOL)updateNetworkOrderInSystem:(NSArray *)array {
-  self.config.networkProfiles = [NSOrderedSet orderedSetWithArray:array];
-  SFAuthorization *auth = [SFAuthorization authorization];
-  
-  BOOL success = [auth obtainWithRight:"system.preferences"
-                                 flags:(kAuthorizationFlagExtendRights |
-                                        kAuthorizationFlagInteractionAllowed |
-                                        kAuthorizationFlagPreAuthorize)
-                                 error:nil];
-  if (!success) return NO;
-  
-  return [self.interface commitConfiguration:self.config authorization:auth error:nil];
-}
 
 - (IBAction)removeNetwork:(NSButton *)sender {
   if (self.tableView.selectedRow >= 0) {
@@ -36,41 +20,50 @@
     if (![self.persistentNetworks containsObject:profile.ssid]) {
       NSMutableArray *tempArray = [self.networks mutableCopy];
       [tempArray removeObjectAtIndex:self.tableView.selectedRow];
-      if ([self updateNetworkOrderInSystem:tempArray]) {
-        [self removeFromSystemKeychain:profile.ssid];
-        self.networks = tempArray;
-        [self.tableView reloadData];
-      }
+      [[self.xpcc remoteObjectProxy] updateNetworkOrderInSystem:tempArray
+                                       removeFromSystemKeychain:profile.ssid
+                                                completionBlock:^(BOOL success) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+          if (success) {
+            NSLog(@"Network removed successfully.");
+            self.networks = tempArray;
+            [self.tableView reloadData];
+          } else {
+            NSAlert *alert = [[NSAlert alloc] init];
+            alert.messageText = @"Error: Could not remove network.";
+            alert.informativeText = @"Reopen this applicationt to try again or contact Support.";
+            [alert runModal];
+            [NSApp terminate:self];
+          }
+        });
+      }];
     }
-  }
-}
-
-- (void)removeFromSystemKeychain:(NSString *)ssid {
-  NSDictionary *query = @{
-      (__bridge id)kSecClass: (__bridge id)kSecClassGenericPassword,
-      (__bridge id)kSecAttrSynchronizable: (__bridge id)kSecAttrSynchronizableAny,
-      (__bridge id)kSecReturnRef: @YES,
-      (__bridge id)kSecAttrAccount: ssid,
-  };
-  
-  CFTypeRef result = NULL;
-  OSStatus status = SecItemCopyMatching((__bridge CFDictionaryRef)query, &result);
-  if (status == errSecSuccess) {
-    status = SecKeychainItemDelete((SecKeychainItemRef)result);
-    CFRelease(result);
   }
 }
 
 #pragma mark App Delegate Methods
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+  self.xpcc = [[SNTXPCConnection alloc] initClientWithName:kXPCServerName privileged:YES];
+  self.xpcc.remoteInterface = [NSXPCInterface interfaceWithProtocol:@protocol(XPCProtocol)];
+  __unsafe_unretained typeof(self) weakSelf = self;
+  self.xpcc.invalidationHandler = ^{
+    NSLog(@"Connection Invalidated.");
+    NSAlert *alert = [[NSAlert alloc] init];
+    alert.messageText = @"Error: Helper tool crashed.";
+    alert.informativeText = @"Reopen this applicationt to try again or contact Support.";
+    [alert performSelectorOnMainThread:@selector(runModal) withObject:NULL waitUntilDone:YES];
+    [NSApp terminate:weakSelf];
+  };
+  [self.xpcc resume];
+
   self.persistentNetworks = [[NSProcessInfo processInfo] arguments];
   
-  self.interface = [[CWWiFiClient sharedWiFiClient] interface];
-  self.config =
-      [CWMutableConfiguration configurationWithConfiguration:self.interface.configuration];
+  CWInterface *interface = [[CWWiFiClient sharedWiFiClient] interface];
+  CWMutableConfiguration *config =
+      [CWMutableConfiguration configurationWithConfiguration:interface.configuration];
   
-  self.networks = [[self.config.networkProfiles array] mutableCopy];
+  self.networks = [[config.networkProfiles array] mutableCopy];
   
   [self.tableView setDraggingSourceOperationMask:NSDragOperationLink forLocal:NO];
   [self.tableView setDraggingSourceOperationMask:NSDragOperationMove forLocal:YES];
@@ -130,13 +123,24 @@ writeRowsWithIndexes:(NSIndexSet *)rowIndexes
   } else {
     [tempArray insertObject:[tArr objectAtIndex:0] atIndex:row];
   }
-  
-  if ([self updateNetworkOrderInSystem:tempArray]) {
-    self.networks = tempArray;
-    [self.tableView reloadData];
-    [self.tableView deselectAll:nil];
-  }
-  
+  [[self.xpcc remoteObjectProxy] updateNetworkOrderInSystem:[tempArray copy]
+                                   removeFromSystemKeychain:nil
+                                            completionBlock:^(BOOL success) {
+    dispatch_async(dispatch_get_main_queue(), ^{
+      if (success) {
+        NSLog(@"Network reordered successfully.");
+        self.networks = tempArray;
+        [self.tableView reloadData];
+        [self.tableView deselectAll:nil];
+      } else {
+        NSAlert *alert = [[NSAlert alloc] init];
+        alert.messageText = @"Error: Could not reorder networks.";
+        alert.informativeText = @"Reopen this applicationt to try again or contact Support.";
+        [alert runModal];
+        [NSApp terminate:self];
+      }
+    });
+  }];
   return YES;
 }
 
